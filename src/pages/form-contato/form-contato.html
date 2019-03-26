@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="game-controller-b"></ion-icon>
+    </button>
+    <ion-title>Contato</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <form [formGroup]='formGroup' (ngSubmit)="enviadoComSussesso()">
+    <ion-list>
+
+      <ion-item>
+        <ion-label floating>Name</ion-label>
+        <ion-input formControlName="nome"></ion-input>
+      </ion-item>
+      <p *ngIf="formGroup.controls.nome.errors && formGroup.controls.nome.dirty" margin-left>Valor Inválido</p>
+
+
+      <ion-item>
+        <ion-label floating>Email</ion-label>
+        <ion-input formControlName="email"></ion-input>
+      </ion-item>
+      <p *ngIf="formGroup.controls.email.errors && formGroup.controls.email.dirty" margin-left>Valor Inválido</p>
+
+
+      <ion-item>
+        <ion-label floating>Assunto</ion-label>
+        <ion-textarea formControlName="assunto"></ion-textarea>
+      </ion-item>
+      <p *ngIf="formGroup.controls.assunto.errors && formGroup.controls.assunto.dirty" margin-left>Valor Inválido</p>
+
+
+      <ion-item>
+        <ion-label floating>Mensagem</ion-label>
+        <ion-input formControlName="mensagem"></ion-input>
+      </ion-item>
+      <p *ngIf="formGroup.controls.mensagem.errors && formGroup.controls.mensagem.dirty" margin-left>Valor Inválido</p>
+
+
+    </ion-list>
+
+    <button ion-button full [disabled]="formGroup.invalid">Enviar</button>
+
+
+
+
+  </form>
+
+</ion-content>

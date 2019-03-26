@@ -23,7 +23,9 @@ export class MyApp {
     this.pages = [
       { title: 'Home', component: 'HomePage' },
       { title: 'List', component: 'ListPage' },
-      { title: 'Teste', component: 'TesteIonicPage' }
+      { title: 'Teste', component: 'TesteIonicPage' },
+      { title: 'Contato', component: 'FormContatoPage' }
+
     ];
 
   }
